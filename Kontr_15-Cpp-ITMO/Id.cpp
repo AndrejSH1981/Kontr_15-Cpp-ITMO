@@ -3,6 +3,7 @@
 #include <string>
 
 using namespace std;
+
 Id::Id(int n, string cat) {
     number = n;
     dopInf = cat;
