@@ -8,19 +8,17 @@ int GradeManager::addStudentGrade(
     const std::string& student_name, int grade
 ) {
     grade_by_student_name[student_name] = StudentGrade{ student_name, grade};
-    cout << "-ñòóäåíòó: " << student_name;
+    cout << "-ÑÑ‚ÑƒĞ´ĞµĞ½Ñ‚Ñƒ: " << student_name;
 
     for (int i = 0; i < size(scores10); i++) {
         if (scores10[i] == 0) {
             scores10[i] = grade;
             break;
-        }
-        
+        } 
     }
 
     for (int i = 0; i < size(scores10); i++) {
     }
-
     return scores10[size(scores10)];
 }
 
@@ -37,6 +35,5 @@ StudentGrade* GradeManager::findStudentGrade(const std::string& student_name) {
         return nullptr;
     }
 }
-
 
 
