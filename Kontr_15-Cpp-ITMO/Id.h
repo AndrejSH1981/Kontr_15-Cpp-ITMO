@@ -7,7 +7,6 @@ class Id {
 private:
     int number;
     string dopInf;
-
 public:
     Id();
     Id(int);
