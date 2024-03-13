@@ -2,8 +2,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 // Конструктор Student
 Student::Student(string name, string last_name, Id* id) {
     Student::set_name(name);
