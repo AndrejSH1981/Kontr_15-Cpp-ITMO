@@ -1,11 +1,10 @@
 #include "Student.h"
-#include "Group.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-// Конструктор Student
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Student
 Student::Student(string name, string last_name, Id* id) {
     Student::set_name(name);
     Student::set_last_name(last_name);
@@ -14,7 +13,7 @@ Student::Student(string name, string last_name, Id* id) {
 }
 
 Student::Student() {}
-// Установка имени студента
+// РЈСЃС‚Р°РЅРѕРІРєР° РёРјРµРЅРё СЃС‚СѓРґРµРЅС‚Р°
 int y = 0;
 void Student::set_name(std::string student_name) {
     Student::name = student_name;
@@ -23,28 +22,28 @@ void Student::set_name(std::string student_name) {
     
 }
 
-// Получение имени студента
+// РџРѕР»СѓС‡РµРЅРёРµ РёРјРµРЅРё СЃС‚СѓРґРµРЅС‚Р°
 std::string Student::get_name() {
     return Student::name;
 }
 
-// Установка фамилии студента
+// РЈСЃС‚Р°РЅРѕРІРєР° С„Р°РјРёР»РёРё СЃС‚СѓРґРµРЅС‚Р°
 void Student::set_last_name(std::string student_last_name) {
     Student::last_name = student_last_name;
 }
 
-// Получение фамилии студента
+// РџРѕР»СѓС‡РµРЅРёРµ С„Р°РјРёР»РёРё СЃС‚СѓРґРµРЅС‚Р°
 std::string Student::get_last_name() {
     return Student::last_name;
     cout << "    --" << last_name << endl;
     ;
 }
 
-// Установка промежуточных оценок и вычисление среднего балла
-void Student::set_scores(int scores[]) {
-    int chislo = 0;
-    double sum = 0;
-    double ball = 0;
+// РЈСЃС‚Р°РЅРѕРІРєР° РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹С… РѕС†РµРЅРѕРє Рё РІС‹С‡РёСЃР»РµРЅРёРµ СЃСЂРµРґРЅРµРіРѕ Р±Р°Р»Р»Р°
+void Student::set_scores(int scores[]) {   int y;
+    chislo = 0;
+    sum = 0;
+    ball = 0;
     for (int i = 0; i < 10; ++i) {
         Student::scores10[i] = scores[i];
 
@@ -58,14 +57,14 @@ void Student::set_scores(int scores[]) {
     
 }
 
-// Среднего балла
+// РЎСЂРµРґРЅРµРіРѕ Р±Р°Р»Р»Р°
 void Student::set_average_score(double ball) {
 
     Student::average_score = ball;
     
 }
 
-// Получение среднего балла
+// РџРѕР»СѓС‡РµРЅРёРµ СЃСЂРµРґРЅРµРіРѕ Р±Р°Р»Р»Р°
 double Student::get_average_score() {
 
     return Student::average_score;
@@ -79,11 +78,11 @@ Id Student::getId() {
     return *idnum;
 }
 
-void Student::display() const  // вывоД данных о студенте
+void Student::display() const  // РІС‹РІРѕР” РґР°РЅРЅС‹С… Рѕ СЃС‚СѓРґРµРЅС‚Рµ
 {
     cout << " " << endl;
-    cout << last_name << " " << name << "; средний балл = " << average_score << "; id: "
-        << idnum->getNumber() << "; доп.инф.: " << idnum->get_dopInf() << endl;
+    cout << last_name << " " << name << "; СЃСЂРµРґРЅРёР№ Р±Р°Р»Р» = " << average_score << "; id: "
+        << idnum->getNumber() << "; РґРѕРї.РёРЅС„.: " << idnum->get_dopInf() << endl;
 }
 
 bool operator==(const Student& p1, const Student& p2) {
